@@ -4,6 +4,7 @@ import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
   background: ${({ seeNav }) => (seeNav ? "transparent" : "transparent")};
+
   height: 80px;
   margin-top: -80px;
   display: ${({ seeNav }) => (seeNav ? "flex" : "none")};
@@ -21,9 +22,9 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 80px;
-  width: 100vw;
-  z-index: 1;
   width: 100%;
+  max-width: 1500px;
+  z-index: 1;
   padding: 0 24px;
 `;
 
