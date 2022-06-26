@@ -12,51 +12,51 @@ import {
   NavRSocial,
 } from "./navElements";
 
-const Navbar = ({ toggle, seeNav }) => {
+const Navbar = ({ toggle, seeNav, seeColor }) => {
   return (
     <>
-      <Nav seeNav={seeNav}>
-        <NavContainer>
-          <NavLogo to="/">Iglesia Puertas Del Cielo</NavLogo>
-          <MobileIcon onClick={toggle}>
+      <Nav seeNav={seeNav} seeColor={seeColor}>
+        <NavContainer seeColor={seeColor}>
+          <NavLogo to="/" seeColor={seeColor}>Iglesia Puertas Del Cielo</NavLogo>
+          <MobileIcon onClick={toggle} seeColor={seeColor}>
             <FaBars />
           </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="/">Inicio</NavLinks>
+          <NavMenu >
+            <NavItem >
+              <NavLinks to="/" seeColor={seeColor}>Inicio</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Contenido">Contenido</NavLinks>
+              <NavLinks to="/Contenido"seeColor={seeColor}>Contenido</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Ministerios">Ministerios</NavLinks>
+              <NavLinks to="/Ministerios"seeColor={seeColor}>Ministerios</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Predicas">Predicas</NavLinks>
+              <NavLinks to="/Predicas"seeColor={seeColor}>Predicas</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Eventos">Eventos</NavLinks>
+              <NavLinks to="/Eventos"seeColor={seeColor}>Eventos</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Blog">Blog</NavLinks>
+              <NavLinks to="/Blog"seeColor={seeColor} >Blog</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="/Contactanos">Contactanos</NavLinks>
+              <NavLinks to="/Contactanos"seeColor={seeColor}>Contactanos</NavLinks>
             </NavItem>
           </NavMenu>
           <NavRSocial>
             <NavItem>
-              <NavA href="https://www.facebook.com">
+              <NavA href="https://www.facebook.com" seeColor={seeColor}>
                 <FaFacebookF />
               </NavA>
             </NavItem>
             <NavItem>
-              <NavA href="https://www.facebook.com">
+              <NavA href="https://www.facebook.com" seeColor={seeColor}>
                 <FaYoutube />
               </NavA>
             </NavItem>
             <NavItem>
-              <NavA href="https://www.facebook.com">
+              <NavA href="https://www.facebook.com" seeColor={seeColor}>
                 <FaWhatsapp />
               </NavA>
             </NavItem>

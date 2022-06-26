@@ -25,7 +25,7 @@ export const RadioB = styled.label`
   padding: 5px;
   border-radius: 50%;
   border: 2px solid #00152f;
-  z-index: 50;
+  z-index: 10;
 
   &:not(:last-child) {
     margin-right: 5px;
@@ -45,7 +45,7 @@ export const RadioB = styled.label`
 `;
 export const RButtom = styled.input``;
 export const EventsLayout = styled.div`
-  z-index: 10;
+  z-index: 5;
   position: absolute;
   top: -50px;
   width: 90%;

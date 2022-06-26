@@ -5,15 +5,18 @@ import { Link as LinkS } from "react-scroll";
 export const Nav = styled.nav`
 
 transition: all 1s ease-in-out;
-  background: ${({ seeNav }) => (seeNav ? "transparent" : "transparent")};
+  background: ${({ seeColor }) => (seeColor==='1-' ? "transparent" : "#fff")};
 
   height: 80px;
   margin-top: -80px;
+  box-shadow: ${({ seeColor }) => (seeColor=='1-' ? "none" : "-1px 10px 10px -5px rgba(0,0,0,0.41);")};
+  -webkit-box-shadow: ${({ seeColor }) => (seeColor=='1-' ? "none" : "-1px 10px 10px -5px rgba(0,0,0,0.41);")};
+  -moz-box-shadow: ${({ seeColor }) => (seeColor=='1-' ? "none" : "-1px 10px 10px -5px rgba(0,0,0,0.41);")};
   display: ${({ seeNav }) => (seeNav ? "flex" : "none")};
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 50;
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease-in-out;
   }
@@ -29,6 +32,8 @@ export const NavContainer = styled.div`
   z-index: 1;
   padding: 0 24px;
   font-size: 16px;
+  
+transition: all 1s ease-in-out;
   @media screen and (max-width: 1400px) {    
   font-size: 14px;
   }
@@ -43,7 +48,7 @@ export const NavLogo = styled(LinkR)`
   margin-left: 24px;
   font-weight: 400;
   text-decoration: none;
-  color: #fff;
+  color: ${({ seeColor }) => (seeColor==='1-' ? "#fff" : "#112d4e")};
   transition: all 0.3s ease-in-out;
   &:hover {
     color: #ffcd38;
@@ -55,7 +60,7 @@ export const MobileIcon = styled.nav`
 
   @media screen and (max-width: 950px) {
     display: block;
-    color: #fff;
+    color: ${({ seeColor }) => (seeColor=='1-' ? "#fff" : "#112d4e")};
     position: absolute;
     top: 0;
     right: 0;
@@ -73,6 +78,7 @@ export const NavMenu = styled.ul`
   text-align: none;
   margin-right: 22px;
 
+  transition: all 1s ease-in-out;
   @media screen and (max-width: 950px) {
     display: none;
   }
@@ -84,7 +90,7 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(LinkS)`
   position: relative;
-  color: #fff;
+  color: ${({ seeColor }) => (seeColor=='1-' ? "#fff" : "#112d4e")};
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -108,7 +114,7 @@ export const NavLinks = styled(LinkS)`
     transition: all 0.2s ease-in-out;
   }
   &:hover {
-    color: #010606;
+    color: ${({ seeColor }) => (seeColor=='1-' ? "#112d4e" : "#1759BD")};
     transform: scale(1.2);
     transition: all 0.2s ease-in-out;
     &::before {
@@ -119,7 +125,7 @@ export const NavLinks = styled(LinkS)`
 `;
 export const NavA = styled.a`
   position: relative;
-  color: #fff;
+  color: ${({ seeColor }) => (seeColor=='1-' ? "#fff" : "#112d4e")};
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -143,7 +149,7 @@ export const NavA = styled.a`
     transition: all 0.2s ease-in-out;
   }
   &:hover {
-    color: #010606;
+    color: ${({ seeColor }) => (seeColor=='1-' ? "#112d4e" : "#1759BD")};
     transform: scale(1.2);
     transition: all 0.2s ease-in-out;
     &::before {

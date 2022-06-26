@@ -1,17 +1,10 @@
 import styled from "styled-components";
 
-import bg from '../../images/test.jpg';
 
 export const InfoContainer = styled.div`
-color: #010606;
-
-
 background-position:center;
 -o-object-fit:cover;
 object-fit:cover;
-
-background-image: ${({bgimg})=> bgimg ? `url(${bg})` : 'red'};
-
 
 @media screen and (max-width:768px){
     padding:100px 0;
@@ -22,12 +15,13 @@ background-image: ${({bgimg})=> bgimg ? `url(${bg})` : 'red'};
 export const InfoWrapper = styled.div`
 display:grid;
 z-index:1;
-height:860px;
-width:100%;
-margin-right:auto;
-margin-left:auto;
+height:800px;
+width:95%;
+margin: 0 auto;
 padding: 0 24px;
 justify-content:center;
+border:1px solid #0c0c0c;
+overflow:hidden;
 `
 
 export const InfoRow = styled.div`
@@ -42,13 +36,9 @@ grid-template-areas:${({imgStart})=> (imgStart ? `'col1 col2' `: `'col1 col2'`)}
 `
 
 export const Column1= styled.div`
-margin-bottom: 15px;
-padding: 0 15px;
 grid-area:col1;
 `
 export const Column2= styled.div`
-margin-bottom: 15px;
-padding: 0 15px;
 grid-area:col2;
 `
 
