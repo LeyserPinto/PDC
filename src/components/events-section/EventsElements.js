@@ -30,6 +30,14 @@ export const RadioB = styled.label`
   &:not(:last-child) {
     margin-right: 5px;
   }
+  
+  &:last-child {
+    display:none;
+    @media screen and (max-width:950px) {
+    
+      display:block;
+  }
+  }
   &:hover,
   :active {
     background-color: #00152f;
@@ -46,8 +54,9 @@ export const EventsLayout = styled.div`
   padding: 10px;
   ${RButtom} {
     display: none;
-  }
+  } 
 `;
+
 
 export const EventsGrid = styled.div`
   width: 200%;
@@ -56,6 +65,12 @@ export const EventsGrid = styled.div`
   grid-template-rows: 100px;
   gap: 20px;
   transition: all 0.8s;
+
+  @media screen and (max-width:780px) {
+    
+    
+  grid-template-columns: repeat(4, 50%);
+}
 `;
 
 export const EventItem = styled.div`

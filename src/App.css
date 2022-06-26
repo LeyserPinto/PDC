@@ -7,3 +7,34 @@
   padding: 0;
   font-family: 'Poppins', 'Open Sans','Montserrat', sans-serif;
 }
+
+
+#rb1:checked ~ #eventgrid{
+  transform: translate(-0%);
+}
+#rb2:checked ~ #eventgrid{
+  transform: translate(-25%);
+}
+#rb3:checked ~ #eventgrid{
+  transform: translate(-50%);
+}
+#rb4:checked ~ #eventgrid{
+  transform: translate(-0%);
+}
+
+@media screen and (max-width:780px) {
+    
+#rb1:checked ~ #eventgrid{
+  transform: translate(-0%);
+}
+#rb2:checked ~ #eventgrid{
+  transform: translate(-52%);
+}
+#rb3:checked ~ #eventgrid{
+  transform: translate(-104%);
+}
+#rb4:checked ~ #eventgrid{
+  transform: translate(-156%);
+}
+  
+}

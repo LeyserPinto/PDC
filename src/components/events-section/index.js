@@ -17,7 +17,7 @@ const EventsSection = () => {
         <RButtom type="radio" name="Rbs" id="rb2" />
         <RButtom type="radio" name="Rbs" id="rb3" />
         <RButtom type="radio" name="Rbs" id="rb4" />
-        <EventsGrid>
+        <EventsGrid id="eventgrid">
           <EventItem>1</EventItem>
           <EventItem>2</EventItem>
           <EventItem>3</EventItem>
