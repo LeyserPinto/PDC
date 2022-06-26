@@ -7,7 +7,15 @@ import {
   RButtom,
   LabelInputs,
   RadioB,
+  EventDate,
+  TextDay,
+  TextTime,
+  EventInfo,
+  InfoText,
+  Icon
+
 } from "./EventsElements";
+import LogoYellow from "../../images/LogoIPC-Amarillo.png"
 
 const EventsSection = () => {
   return (
@@ -18,10 +26,58 @@ const EventsSection = () => {
         <RButtom type="radio" name="Rbs" id="rb3" />
         <RButtom type="radio" name="Rbs" id="rb4" />
         <EventsGrid id="eventgrid">
-          <EventItem>1</EventItem>
-          <EventItem>2</EventItem>
-          <EventItem>3</EventItem>
-          <EventItem>4</EventItem>
+          {/* //1 */}
+          <EventItem>
+            <EventDate>
+              <TextDay>10 Ene</TextDay>
+              <TextTime>00:00</TextTime>
+            </EventDate>
+             <EventInfo>
+              <InfoText>Event: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, laboriosam!</InfoText>
+            </EventInfo>
+            <div>
+              <Icon src={LogoYellow} alt="..." />
+            </div>
+          </EventItem>
+          {/* //2 */}
+          <EventItem>
+          <EventDate>
+              <TextDay>10 Feb</TextDay>
+              <TextTime>00:00</TextTime>
+            </EventDate>
+             <EventInfo>
+              <InfoText>Event: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, laboriosam!</InfoText>
+            </EventInfo>
+            <div>
+              <Icon src={LogoYellow} alt="..." />
+            </div>
+          </EventItem>
+          {/* //3 */}
+          <EventItem>
+          <EventDate>
+              <TextDay>10 Mar</TextDay>
+              <TextTime>00:00</TextTime>
+            </EventDate>
+             <EventInfo>
+              <InfoText>Event: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, laboriosam!</InfoText>
+            </EventInfo>
+            <div>
+              <Icon src={LogoYellow} alt="..." />
+            </div>
+          </EventItem>
+          {/* //4 */}
+          <EventItem>
+          <EventDate>
+              <TextDay>10 Abr</TextDay>
+              <TextTime>00:00</TextTime>
+            </EventDate>
+             <EventInfo>
+              <InfoText>Event: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, laboriosam!</InfoText>
+            </EventInfo>
+            <div>
+              <Icon src={LogoYellow} alt="..." />
+            </div>
+          </EventItem>
         </EventsGrid>
         {/* <div id="rButtoms">
         <div id="labels-inputs">

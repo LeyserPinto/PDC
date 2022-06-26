@@ -74,6 +74,63 @@ export const EventsGrid = styled.div`
 `;
 
 export const EventItem = styled.div`
-  height: 100%;
-  border: 1px solid #0c0c0c;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 10px;
+  gap: 20px;
+  border-radius: 5px; 
+  box-shadow: 1px 1px 10px #0c0c0c40;
+  background-color:#fff;
 `;
+
+
+export const EventDate=styled.div`
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+`
+export const TextDay=styled.p`
+  width: 100%;
+  height: 60%;
+  background-color: #6aabe0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
+  font-size:1.15rem;
+  display: flex;
+    align-items: center;
+    justify-content:center;
+  
+    
+`
+export const TextTime=styled.p`
+  width: 100%;
+  height: 40%;
+  background-color: #070f1d;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align:center;
+  color:#fff;
+`
+
+export const EventInfo=styled.div`
+display: flex;
+width:100%;
+`
+export const InfoText=styled.p`
+  text-align:left;
+`
+export const Icon=styled.img`
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    opacity: 35%;
+    width: 7rem;
+    transform: rotate(345deg);
+    filter: grayscale(100%);/*Edge and Firefox*/
+    -webkit-filter: grayscale(100%);/*Chrome and Safari*/    
+
+`

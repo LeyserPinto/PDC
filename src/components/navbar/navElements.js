@@ -3,6 +3,8 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
+
+transition: all 1s ease-in-out;
   background: ${({ seeNav }) => (seeNav ? "transparent" : "transparent")};
 
   height: 80px;
@@ -12,7 +14,6 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  transition: all 0.5s ease-in-out;
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease-in-out;
   }
