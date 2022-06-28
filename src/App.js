@@ -1,10 +1,9 @@
-import React,{useEffect,useState} from 'react'
-import './App.css';
-import {BrowserRouter} from "react-router-dom";
-import Home from './pages';
-import Navbar from '../src/components/navbar';
-import Sidebar from '../src/components/sidebar'
-
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Home from "./pages";
+import Navbar from "../src/components/navbar";
+import Sidebar from "../src/components/sidebar";
 
 var LastScrollPosition = 0;
 
@@ -15,9 +14,9 @@ function App() {
   const [Scroll, SetScroll] = useState(0);
   //Evento para detectar Scroll
   const [seeNav, SetSeeNav] = useState(true);
-  
+
   //Evento para Color de NavBar
-  const [seeColor, SetSeeColor] = useState('transparent');
+  const [seeColor, SetSeeColor] = useState("1-");
 
   function Scrolling() {
     SetScroll(window.pageYOffset);
@@ -29,17 +28,16 @@ function App() {
     } else {
       SetSeeNav(true);
       LastScrollPosition = Scroll;
-      if(LastScrollPosition<500){
-        SetSeeColor('1-');
-        
-      console.log(seeColor);
-      }else{
-        
-        SetSeeColor('2-');
-        
-      console.log(seeColor);
+      if (LastScrollPosition < 500) {
+        SetSeeColor("1-");
+
+        console.log(seeColor);
+      } else {
+        SetSeeColor("2-");
+
+        console.log(seeColor);
       }
-      
+
       console.log(LastScrollPosition);
     }
   }
