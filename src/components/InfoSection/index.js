@@ -8,6 +8,10 @@ import {
   TopLine,
   Heading,
   Subtitle,
+  ActionContainer,
+  PrayBox,
+  ReadBox,
+  ImgWrap,
 } from "./InfoElements";
 
 const InfoSection = ({ topLine, headLine, description }) => {
@@ -20,8 +24,14 @@ const InfoSection = ({ topLine, headLine, description }) => {
             <Heading>{headLine}</Heading>
             <Subtitle>{description}</Subtitle>
           </TextContainer>
+          <ActionContainer>
+            <PrayBox></PrayBox>
+            <ReadBox></ReadBox>
+          </ActionContainer>
         </Col1>
-        <Col2></Col2>
+        <Col2>
+          <ImgWrap></ImgWrap>
+        </Col2>
       </InfoWrapper>
     </InfoContainer>
   );

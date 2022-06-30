@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Img from "../../images/img1.webp";
+
 export const InfoContainer = styled.div`
   max-width: 1440px;
   width: 100%;
@@ -17,7 +19,7 @@ export const InfoWrapper = styled.div`
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: 0.8fr 1fr;
   }
 `;
 export const Col1 = styled.div`
@@ -29,9 +31,13 @@ export const Col2 = styled.div`
 
 export const TextContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 60%;
   border: 1px solid #0c0c0c;
   padding: 50px;
+  margin-bottom: 15px;
+  @media screen and (max-width: 800px) {
+    height: 65%;
+  }
 `;
 
 export const TopLine = styled.p`
@@ -56,11 +62,46 @@ export const Heading = styled.h1`
   }
 `;
 export const Subtitle = styled.p`
-  max-width: 800px;
+  max-width: 600px;
   color: #0c0c0c;
   line-height: 24px;
   font-size: 16px;
   margin-bottom: 35px;
-  text-overflow: ellipsis;
+  @media screen and (max-width: 800px) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+`;
+export const ActionContainer = styled.div`
+  margin: 0 auto;
+  width: 80%;
+  height: 30%;
   border: 1px solid #0c0c0c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const PrayBox = styled.div`
+  width: 40%;
+  height: 80%;
+  border: 1px solid #0c0c0c;
+`;
+
+export const ReadBox = styled.div`
+  width: 40%;
+  height: 80%;
+  border: 1px solid #0c0c0c;
+`;
+
+export const ImgWrap = styled.div`
+  width: 100%;
+  height: 100%;
+  background-image: url(${Img});
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
 `;
