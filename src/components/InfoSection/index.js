@@ -1,4 +1,6 @@
 import React from "react";
+import {FaPrayingHands, FaBookOpen} from 'react-icons/fa'
+
 import {
   InfoContainer,
   InfoWrapper,
@@ -9,10 +11,12 @@ import {
   Heading,
   Subtitle,
   ActionContainer,
-  PrayBox,
-  ReadBox,
+  InfoBox,
   ImgWrap,
-} from "./InfoElements";
+  BoxIcon,
+  BoxTextH1,
+  BoxTextP,
+} from "./infoElements";
 
 const InfoSection = ({ topLine, headLine, description }) => {
   return (
@@ -25,8 +29,16 @@ const InfoSection = ({ topLine, headLine, description }) => {
             <Subtitle>{description}</Subtitle>
           </TextContainer>
           <ActionContainer>
-            <PrayBox></PrayBox>
-            <ReadBox></ReadBox>
+            <InfoBox>
+              <BoxIcon><FaPrayingHands /></BoxIcon>
+              <BoxTextH1>PETICIÓN DE ORACIÓN</BoxTextH1>
+              <BoxTextP>Lorem ipsum dolor, consectetur elit, sed do tempor incididunt labore.</BoxTextP>
+            </InfoBox>
+            <InfoBox>
+              <BoxIcon> <FaBookOpen /></BoxIcon>
+              <BoxTextH1>ESTUDIOS BIBLICOS</BoxTextH1>
+              <BoxTextP>Lorem ipsum dolor, consectetur elit, sed do tempor incididunt labore.</BoxTextP>
+            </InfoBox>
           </ActionContainer>
         </Col1>
         <Col2>

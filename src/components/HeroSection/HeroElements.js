@@ -67,7 +67,9 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroImg = styled.img`
-  width: 200px;
+  
+  width:200px;
+  
 `;
 
 export const HeroH2 = styled.p`

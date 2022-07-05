@@ -20,7 +20,6 @@ const HeroSection = () => {
       </HeroBg>
       <HeroContent>
         <HeroImg src={Logo} />
-        <HeroH2>Casa de Dios</HeroH2>
         <HeroH1>PUERTAS DEL CIELO</HeroH1>
         <HeroP>Adora en Espiritu y Verdad Junto a Nosotros</HeroP>
       </HeroContent>

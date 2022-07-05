@@ -78,16 +78,22 @@ export const EventItem = styled.div`
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 100%;
   padding: 10px;
   gap: 20px;
   border-radius: 5px; 
   box-shadow: 1px 1px 10px #0c0c0c40;
   background-color:#fff;
+
+  @media screen and (max-width:500px){
+    
+  grid-template-columns: 1.2fr 3fr 0.5fr;
+  }
 `;
 
 
 export const EventDate=styled.div`
-display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -101,8 +107,8 @@ export const TextDay=styled.p`
   
   font-size:1.15rem;
   display: flex;
-    align-items: center;
-    justify-content:center;
+  align-items: center;
+  justify-content:center;
   
     
 `
@@ -121,7 +127,11 @@ display: flex;
 width:100%;
 `
 export const InfoText=styled.p`
-  text-align:left;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
 `
 export const Icon=styled.img`
     position: absolute;
