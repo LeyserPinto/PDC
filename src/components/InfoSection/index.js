@@ -1,6 +1,9 @@
 import React from "react";
 import {FaPrayingHands, FaBookOpen} from 'react-icons/fa'
 
+import Logo from "../../images/LogoIPC-Amarillo.png";
+import { Button,DonateButton } from "../ButtonElements";
+
 import {
   InfoContainer,
   InfoWrapper,
@@ -15,11 +18,24 @@ import {
   ImgWrap,
   BoxIcon,
   BoxTextH1,
-  BoxTextP,
+  BoxTextP,  
+  BtnWrap,
+  Donaciones,
+  DonBg,
+  DonContent,
+  DonateImg,
+  DonText,
+  DonP,
+  DonBtnWrap
 } from "./infoElements";
 
 const InfoSection = ({ topLine, headLine, description }) => {
   return (
+
+    <>
+    {
+      //Sobre Nosotros Seccion
+    }
     <InfoContainer>
       <InfoWrapper>
         <Col1>
@@ -40,12 +56,54 @@ const InfoSection = ({ topLine, headLine, description }) => {
               <BoxTextP>Lorem ipsum dolor, consectetur elit, sed do tempor incididunt labore.</BoxTextP>
             </InfoBox>
           </ActionContainer>
+          <BtnWrap>
+                  <Button
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                  >
+                    NUESTRA HISTORIA
+                  </Button>
+                </BtnWrap>
         </Col1>
         <Col2>
           <ImgWrap></ImgWrap>
         </Col2>
       </InfoWrapper>
     </InfoContainer>
+    
+    {
+      //Ministerios Seccion
+    }
+
+    <Donaciones>
+    <DonBg />
+    <DonContent>
+        <DonateImg src={Logo} />
+        <DonText>"Cada uno debe dar según el deseo de su corazón,
+          No con tristeza, ni por Necesidad, 
+          ¡Dios Ama al que da con Alegría!"
+        </DonText>
+        <DonP>2 CORINTIOS 9:7</DonP>
+        <DonBtnWrap>
+                  <DonateButton
+                    to="Donate"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                  >
+                    ¡Donar!
+                  </DonateButton>
+                </DonBtnWrap>
+      </DonContent>
+    </Donaciones>
+    </>
+    
   );
 };
 
