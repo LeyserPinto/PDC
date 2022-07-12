@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 import Img from "../../images/img1.webp";
 
+import DonImg from "../../images/Donate.jpg";
+
+//Div Principal Sobre Nosotros
 export const InfoContainer = styled.div`
   max-width: 1440px;
   width: 100%;
@@ -9,7 +12,7 @@ export const InfoContainer = styled.div`
   margin: 0 auto;
   padding: 10px;
 `;
-
+//Div Grid Layout: Hijo de InfoCOntainer
 export const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -19,15 +22,15 @@ export const InfoWrapper = styled.div`
 
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 `;
-export const Col1 = styled.div`
-  padding: 15px;
-`;
-export const Col2 = styled.div`
-`;
 
+//Div Grid Columna: Hijo de InfoWrapper
+export const Col1 = styled.div``;
+//Div Grid Columna: Hijo de InfoWrapper
+export const Col2 = styled.div``;
+//Div para Texto: Hijo de Col1
 export const TextContainer = styled.div`
   width: 100%;
   height: 60%;
@@ -35,11 +38,11 @@ export const TextContainer = styled.div`
   margin-bottom: 30px;
   @media screen and (max-width: 800px) {
     height: 50%;
-    
+
     margin-bottom: 20px;
   }
 `;
-
+//P  Area de texto, Superior En este Caso Sobre la Iglesia: Hijo de TextContainer
 export const TopLine = styled.p`
   color: #112d4e;
   font-size: 16px;
@@ -50,7 +53,7 @@ export const TopLine = styled.p`
   margin-bottom: 16px;
   font-family: "Open Sans", "Montserrat", sans-serif;
 `;
-
+//H1  Area de texto,En este caso dice Iglesia Puertas del Cielo: Hijo de TextContainer
 export const Heading = styled.h1`
   color: #112d4e;
   font-size: 48px;
@@ -61,21 +64,25 @@ export const Heading = styled.h1`
     font-size: 28px;
   }
 `;
+
+//P  Area de texto, En este caso dice Resumen de la Iglesia: Hijo de TextContainer
 export const Subtitle = styled.p`
   max-width: 600px;
   color: #0c0c0c;
   line-height: 20px;
   font-size: 14px;
-  padding:10px;
+  padding: 10px;
   @media screen and (max-width: 800px) {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     line-clamp: 3;
     overflow: hidden;
-    height:70px;
+    height: 70px;
   }
 `;
+
+//Div para Botones: Hijo de Col1
 export const ActionContainer = styled.div`
   margin: 0 auto;
   width: 80%;
@@ -84,54 +91,63 @@ export const ActionContainer = styled.div`
   display: flex;
   justify-content: space-around;
   @media screen and (max-width: 800px) {
-    
-  height: 50%;
+    height: 40%;
   }
 `;
-
+//Div ActionBox: Hijo de Col1
 export const InfoBox = styled.div`
   width: 50%;
   height: 80%;
-  padding:5px;
-  display:flex;
-  flex-direction:column;
-  flex-wrap:nowrap;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 `;
-
-
-
-
+//Div ActionBox: Hijo de InfoBox
 export const BoxIcon = styled.div`
   width: 60px;
   height: 60px;
-  border-radius:50%;
-  background:#5698CE;
+  border-radius: 50%;
+  background: #5698ce;
   display: flex;
-  justify-content:center;
-  align-items:center;
-  font-size:35px;
-  color:#081D35;
-  cursor:pointer;
-  transition: all ease-in-out .5s;
-  &:hover{
-    transform:scale(1.2);
-    color: #FFC305;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #081d35;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  &:hover {
+    transform: scale(1.2);
+    color: #ffc305;
   }
 `;
 
+//H1 Area de texto, ActionBox: Hijo de InfoBox
 export const BoxTextH1 = styled.h1`
-
   width: 100%;
-  font-size:14px;
+  font-size: 14px;
   color: #ffc305;
 `;
+
+//P Area de texto, ActionBox: Hijo de InfoBox
 export const BoxTextP = styled.p`
   width: 100%;
-  font-size:10px;
-  color:#3C3C3C;
+  font-size: 10px;
+  color: #3c3c3c;
 `;
 
+//Div Boton Wrapper: Hijo de Col1
+export const BtnWrap = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  @media screen and (max-width: 800px) {
+    height: 10%;
+  }
+`;
 
+//Div Imagen Wrapper: Hijo de Col2
 export const ImgWrap = styled.div`
   width: 100%;
   height: 100%;
@@ -139,4 +155,108 @@ export const ImgWrap = styled.div`
   object-fit: cover;
   background-position: center;
   background-size: cover;
+
+  @media screen and (max-width: 800px) {
+    height: calc(100% - 25px);
+    margin-top: 25px;
+  }
+`;
+
+//Div: Donaciones
+export const Donaciones = styled.div`
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+
+  position: relative;
+`;
+
+//Div: Donaciones Background: Hijo de Donaciones
+export const DonBg = styled.div`
+  width: 100%;
+  height: 100%;
+  background: url(${DonImg});
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #091f38d9; /* Chrome 10-25, Safari 5.1-6 */
+    z-index: 2;
+  }
+`;
+//Div: Donaciones Background: Hijo de Donaciones
+export const DonContent = styled.div`
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  //50% -( 100% / 2)= 50% - 50%=0%;
+  top: 10%;
+  //50% -( 80% / 2)= 50% - 40%=10%;
+  left: 10%;
+  padding: 40px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    height: 80%;
+    top: 10%;
+    left: 0%;
+  }
+`;
+
+//Img: Donaciones Logo Iglesia: Hijo de DonContent
+export const DonateImg = styled.img`
+  width: 150px;
+`;
+
+//P: Text Area: Hijo de DonContent
+export const DonText = styled.p`
+  padding: 20px;
+  width: 80%;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  @media screen and (max-width: 800px) {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
+`;
+
+//P: Text Area: Hijo de DonContent
+export const DonP = styled.p`
+  font-size: 1.3125rem;
+  margin: 10px;
+  color: #fff;
+  @media screen and (max-width: 800px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
+`;
+//div:Area de Boton: Hijo de DonContent
+export const DonBtnWrap = styled.div`
+  margin-top: 20px;
+  width: 80%;
+`;
+
+//div:Area de Boton: Hijo de DonContent
+export const MinContainer = styled.div`
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto;
 `;
